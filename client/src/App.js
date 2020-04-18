@@ -4,6 +4,7 @@ import SavedList from "./Movies/SavedList";
 import MovieList from "./Movies/MovieList";
 import Movie from "./Movies/Movie";
 import UpdateMovie from "./Movies/UpdateMovie";
+import MoviePost from './Movies/MoviePost';
 
 const App = () => {
   const [savedList, setSavedList] = useState([]);
@@ -14,6 +15,7 @@ const App = () => {
     <div>
       <SavedList list={savedList} />
       <Route exact path="/" component={MovieList} />
+      <Route path="/" component={MoviePost} />
       <Route
         path="/movies/:id"
         render={props => {
